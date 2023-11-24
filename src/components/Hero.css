@@ -3,7 +3,7 @@
 .hero{
     background-image: var(--background-image);
     background-size: cover;
-    height:91vh;
+    height:90.3vh;
     color:white;
     display:flex;
     flex-direction: column;
