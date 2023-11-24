@@ -21,7 +21,7 @@ export function Navbar(){
     return (
         <nav>
             <Link to={"/"}>
-                <img src="img/logo.jpeg" alt="Landis Store logo" />
+                <img src="../img/logo.jpeg" alt="Landis Store logo" />
             </Link>
             <form onSubmit={handleSearch}>
                 <input name="q" type="text" placeholder="Search" value={query} onChange={(e)=>setQuery(e.target.value)} />
