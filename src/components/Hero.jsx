@@ -13,10 +13,10 @@ function HeroError(){
 }
 
 export function Hero(){
-    const {data}=useFetch('https://fakestoreapi.com/products/categories');
+    const {data, loading}=useFetch('https://fakestoreapi.com/products/categories');
     return (
         <section className="hero">
-            {!data && <HeroError></HeroError>}
+            {loading && <h1>Loading</h1>}
             {data &&  
             <section className="heroMessage">
                 <h1>Welcome to our online store!</h1>

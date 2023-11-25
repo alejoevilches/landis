@@ -1,5 +1,6 @@
 .modal{
     width:60vw;
+    max-width:450px;
     max-height:91vh;
     overflow-y: auto;
     overflow-x: hidden;

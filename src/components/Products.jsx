@@ -11,7 +11,7 @@ export function Products(){
     const location=useLocation();
     const decodedPath=decodeURIComponent(location.pathname);
     const cat=decodedPath.split("/")[2]
-    const { data } = useFetch(`https://fakestoreapi.com/products/${location.pathname}`);
+    const { data, loading } = useFetch(`https://fakestoreapi.com/products/${location.pathname}`);
     const {addToFavs, isFavorite, removeFromFavs}=useContext(FavsContext);
     const {addToCart, isInCart, removeFromCart}=useContext(CartContext);
     return(
@@ -20,6 +20,7 @@ export function Products(){
             <main>
                 <h1 className="productsTitle">Welcome to the {cat} section</h1>
                 <ul>
+                    {loading && <h1>Loading</h1>}
                     {data && data.map((prod)=>{
                         const isProductInFavs=isFavorite(prod);
                         const isProductInCart=isInCart(prod);
